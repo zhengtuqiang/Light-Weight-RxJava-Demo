@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ApplicationDemo</string>
+    <string name="app_name">轻量级RxJava</string>
+    <string name="activity_name">Activity名字</string>
 </resources>

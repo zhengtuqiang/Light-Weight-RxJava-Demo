@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NormalRxActivity"></activity>
+        <activity android:name=".NormalRxActivity" android:label="@string/activity_name"></activity>
         <activity android:name=".RxMapActivity"></activity>
         <activity android:name=".RxSchuderActivity"></activity>
         <activity android:name=".RxFlatMapActivity"></activity>
