@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtn1;
     private Button mBtn2;
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtn7;
     private Button mBtn8;
     private Button mBtn9;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,41 +38,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button9).setOnClickListener(this);
         findViewById(R.id.button10).setOnClickListener(this);
         findViewById(R.id.button11).setOnClickListener(this);
-//        mBtn1= (Button) findViewById(R.id.button);
-//        mBtn1= (Button) findViewById(R.id.button);
-//        mBtn1= (Button) findViewById(R.id.button);
-
-
+        //        mBtn1= (Button) findViewById(R.id.button);
+        //        mBtn1= (Button) findViewById(R.id.button);
+        //        mBtn1= (Button) findViewById(R.id.button);
 
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent=null;
-        switch (view.getId()){
-            case R.id.button1:intent=new Intent(MainActivity.this,NormalRxActivity.class);
+        Intent intent = null;
+        switch (view.getId()) {
+            //学习简单的RXJAVA的流程
+            case R.id.button1:
+                intent = new Intent(MainActivity.this, NormalRxActivity.class);
                 break;
-            case R.id.button2: intent=new Intent(MainActivity.this,RxMapActivity.class);
+            //操作符--MAP
+            case R.id.button2:
+                intent = new Intent(MainActivity.this, RxMapActivity.class);
                 break;
-            case R.id.button3:intent=new Intent(MainActivity.this,RxSchuderActivity.class);
+            //RXJAVA的线程调度
+            case R.id.button3:
+                intent = new Intent(MainActivity.this, RxSchuderActivity.class);
                 break;
-            case R.id.button4:intent=new Intent(MainActivity.this,RxFlatMapActivity.class);
+            //操作符--FLATMAP
+            case R.id.button4:
+                intent = new Intent(MainActivity.this, RxFlatMapActivity.class);
                 break;
-            case R.id.button5:intent=new Intent(MainActivity.this,RxMergeActivity.class);
+            //操作符--合并
+            case R.id.button5:
+                intent = new Intent(MainActivity.this, RxMergeActivity.class);
                 break;
-            case R.id.button6:intent=new Intent(MainActivity.this,RxBindingActivity.class);
+            //基于RXJAVA的BINDING
+            case R.id.button6:
+                intent = new Intent(MainActivity.this, RxBindingActivity.class);
                 break;
-            case R.id.button7:intent=new Intent(MainActivity.this,RxFilterActivity.class);
+            //操作符--FILTER
+            case R.id.button7:
+                intent = new Intent(MainActivity.this, RxFilterActivity.class);
                 break;
-            case R.id.button8:intent=new Intent(MainActivity.this,RxTakeActivity.class);
+            //操作符--TAKE,DOONNEXT
+            case R.id.button8:
+                intent = new Intent(MainActivity.this, RxTakeActivity.class);
                 break;
-            case R.id.button9:intent=new Intent(MainActivity.this,RxTimerActivity.class);
+            //操作符--INTERVAL，取消订阅
+            case R.id.button9:
+                intent = new Intent(MainActivity.this, RxTimerActivity.class);
                 break;
-            case R.id.button10:intent=new Intent(MainActivity.this,RxSortActivity.class);
+            //操作符--TOSORDEDLIST
+            case R.id.button10:
+                intent = new Intent(MainActivity.this, RxSortActivity.class);
                 break;
-            case R.id.button11:intent=new Intent(MainActivity.this,RxConnetActivity.class);
+            //操作符--CONNECT
+            case R.id.button11:
+                intent = new Intent(MainActivity.this, RxConnectActivity.class);
                 break;
-
         }
         startActivity(intent);
     }

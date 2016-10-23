@@ -15,8 +15,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="rxbinding是基于RxJava提供了一套在 Android 平台上的基于 RxJava 的 Binding API，类似于ClickListener这样的监听绑定"/>
+
     <EditText
         android:id="@+id/edit1"
+        android:hint="输入含有1的数字，下方才会出现提示"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""

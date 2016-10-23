@@ -6,15 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.List;
-
 import rx.Observable;
 import rx.Subscription;
 import rx.functions.Action1;
-import rx.functions.Func1;
 import rx.observables.ConnectableObservable;
 
-public class RxConnetActivity extends AppCompatActivity implements View.OnClickListener{
+public class RxConnectActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView mText;
     private Button mBtn;
@@ -55,7 +52,7 @@ public class RxConnetActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.button:
                 mText.setText("");
-                normol();
+                normal();
                 break;
             case R.id.button_cancal:
                 mText.setText("");
@@ -65,7 +62,7 @@ public class RxConnetActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private void normol() {
+    private void normal() {
         Observable  observable= Observable.from(integer);
         Action1 a1=new Action1<Integer>(){
             @Override

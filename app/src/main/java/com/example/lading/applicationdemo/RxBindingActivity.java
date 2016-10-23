@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jakewharton.rxbinding.view.RxView;
 import com.jakewharton.rxbinding.widget.RxTextView;
@@ -42,7 +41,6 @@ public class RxBindingActivity extends AppCompatActivity implements View.OnClick
         mText= (TextView) findViewById(R.id.text1);
         mEdit= (EditText) findViewById(R.id.edit1);
         mBtn= (Button) findViewById(R.id.button);
-        mEdit.setHint("输入含有1的数字，下方才会出现提示");
         mText.setText("提示数据：\n");
 
         mBtn.setOnClickListener(this);
@@ -109,7 +107,6 @@ public class RxBindingActivity extends AppCompatActivity implements View.OnClick
                        mText.append("\n 防误触 测试  \n");
                     }
                 });
-
     }
 
     @Override
