@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import rx.Observable;
 import rx.functions.Action1;
@@ -49,12 +52,23 @@ public class RxFilterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void start() {
+        final Integer[] elements = {1, 2, 3};
+        final List<Integer> lists = new ArrayList<Integer>();
+        Collections.addAll(lists, elements);
         Integer[] integers={1,2,3,4,5,6,7,8,9,10};
         Observable.from(integers)
+                /*.filter(new Func1<Integer, Boolean>() {
+                    @Override
+                    public Boolean call(Integer integer) {
+                        //执行一系列的业务，如果返回的值是true，那么就保留这个变量
+                        return integer%2!=0;
+                    }
+                })*/
                 .filter(new Func1<Integer, Boolean>() {
                     @Override
                     public Boolean call(Integer integer) {
-                        return integer%2!=0;
+
+                        return !lists.contains(integer);
                     }
                 })
                 .subscribe(new Action1<Integer>() {
